@@ -121,7 +121,7 @@
 </html>
 
 -------------------------------------------------------------
-from flask import Flask  
+1.from flask import Flask  
 app = Flask(__name__)  
 @app.route('/')  
 def hello():  
@@ -148,14 +148,36 @@ services:
     ports:
       - "5000:5000"
 ///docker-compo.yml///////////
+>>>>>docker compose up and localhost:5000>>>>>>>
 ----------------------------------------
 -----------------------------------------
-FROM nginx:alpine
+2 .FROM nginx:alpine
 COPY reg.html /usr/share/nginx/html/index.html
 EXPOSE 9090
 ////dockerfile(containerized reg)//////
+>>>>>docker pull nginx>>>>
+>>>>docker images>>>>>>
+>>>>docker exec -it contaid /bin/bash >>>>>>>.
+>>>>ls/usr/nginx/html>>>>>>>>
+>>>>docker build -t simple-niginx . >>>>>>>>>
+>>>>>docker run -d -p 9090:80 simple-nginx>>>
 ------------------------------------------
 --------------------------------------------
+>>echo "<html><body><h1>MYYYYYYYYYY</h1></body></html>" >book.html >>>>>>>>>
+>>>add book.html>>>>
+>>>git commit -m "book">>>>>>
+>>>>git checkout -b chp1>>>>>
+>>>nano book.html>>>>>
+>>>>git add book.html>>>>>>>>
+>>>>git commit -m "ch1" >>>>>
+>>>git checkout master>>>>>>
+>>>git merge chp1>>>>
+>>>repeat ass git checkout -b ch2 >>>>>
+>>>>start book.html>>>>>>
+---------------------------------------------------------------------
+----------------------------------------------------------
+
+----------------------------------------------------------
 import java.util.Scanner;
 public class App {
     public static void main(String[] args) {
@@ -198,6 +220,8 @@ COPY App.java .
 RUN javac App.java
 CMD ["java", "App"]
 ////dockerfile(javacontainerized)/////
+>>docker build -t folder .
+>>docker run -it folder
 -----------------------------------------------------------------------
 -----------------------------------------------------------------------
 
@@ -395,7 +419,7 @@ EXPOSE 8082
 # Start Nginx
 CMD ["nginx", "-g", "daemon off;"]
 //////dockerfile(testcases selenium)
-
+----------------------------------------------------------------------------
 import time
 from selenium import webdriver
 from selenium.webdriver.edge.service import Service
@@ -460,5 +484,11 @@ driver.quit()
 
 print("Test Execution Completed Successfully!")
 ////samplescrpt2.py/////
+
+<<pip install selenium>>>>
+<<docker pull selenium/standalone-chrome>>>>
+<<docker build -t my-web-app .>>>>
+ <<<docker run -d -p 8080:80 --name my-web-app my-web-app>>
+   <<<python samplescript.py>>>>>>
 --------------------------------------------------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------------------------------------------------
